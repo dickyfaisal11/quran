@@ -1,0 +1,101 @@
+:root {
+    --primary-bg:rgb(248, 250, 252);
+    --secondary-bg: #ffffff;
+    --text-color: #212529;
+    --card-bg: #ffffff;
+    --card-border: rgba(0, 0, 0, 0.125);
+    --arabic-color:rgb(0, 4, 1);
+}
+
+[data-bs-theme="dark"] {
+    --primary-bg:rgb(14, 14, 15);
+    --secondary-bg:rgb(12, 12, 12);
+    --text-color: #e6e6e6;
+    --card-bg:rgb(9, 9, 9);
+    --card-border:rgb(16, 17, 17);
+    --arabic-color:rgb(242, 246, 250);
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.surah-list {
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+#ayatContainer {
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+.arabic-ayat {
+    text-align: right; /* Memastikan teks Arab rata kanan */
+    direction: rtl; /* Menentukan arah teks Arab dari kanan ke kiri */
+    font-family: 'Amiri', serif; /* Font yang digunakan untuk teks Arab */
+    font-size: 24px; /* Ukuran font yang nyaman untuk teks Arab */
+    margin-bottom: 10px;
+}
+
+.translation {
+    text-align: left; /* Menyusun terjemahan rata kiri */
+    font-size: 16px; /* Ukuran font untuk terjemahan */
+    line-height: 1.6; /* Jarak antar baris untuk keterbacaan */
+    margin-bottom: 15px;
+}
+
+
+.ayat-number-badge {
+    background-color: var(--arabic-color);
+    color: white;
+    padding: 0.1rem 0.4rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.ayat-card {
+    background-color: var(--secondary-bg);
+    border-left: 3px solid var(--arabic-color);
+}
+
+.surah-item {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.surah-item:hover {
+    transform: translateX(5px);
+}
+
+.surah-description {
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--arabic-color);
+    border-radius: 4px;
+}
+
+
